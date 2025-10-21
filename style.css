@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Serif:ital,wght@0,100..900;1,100..900&family=Yuji+Boku&display=swap');
+
+/* --- VARIÁVEIS DE COR: De Futurista para Zen --- */
+:root {
+    /* Fundo: De azul escuro/preto para verde musgo/cinza suave */
+    --cor-fundo: #E0E4D6; /* Cinza claro suave (areia) */
+    --cor-principal: #F5F5F0; /* Branco suave (papel de arroz) */
+    --cor-secundaria: #A9B890; /* Verde musgo suave (bambu) */
+    --cor-destaque: #6B8E23; /* Verde oliva escuro (plantas) */
+    --cor-texto: #36454F; /* Cinza ardósia escuro (tinta/pedra) */
+}
+  
+/* --- ESTILO GERAL --- */
+body {
+    /* Mantém a cor de fundo, mas muda o tom */
+    background-color: var(--cor-fundo);
+    /* Mantém a cor do texto, mas muda o tom */
+    color: var(--cor-texto);
+    /* Mudei a fonte para uma mais elegante/tradicional */
+    font-family: 'Roboto Serif', serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.caixa-principal{
+    /* Cor principal mais clara, remetendo a papel de arroz ou madeira clara */
+    background-color: var(--cor-principal);
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+    padding: 20px;
+    /* Adicionei uma sombra sutil para dar profundidade e remeter a uma moldura */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    border-radius: 10px;
+}
+
+/* --- ESTILO DE TÍTULOS E ÁREAS DE CONTEÚDO --- */
+h1, .caixa-perguntas, .caixa-resultado{
+    /* Fonte para títulos, remetendo a algo mais caligráfico ou clássico */
+    font-family: 'Yuji Boku', serif;
+}
+
+h1 {
+    /* Cor de destaque mudou para um verde mais natural */
+    color: var(--cor-destaque);
+    /* Adicionei um espaçamento sutil */
+    margin-bottom: 20px;
+}
+
+/* --- ESTILO DE BOTÕES --- */
+button {
+    /* Cor secundária (bambu) */
+    background-color: var(--cor-secundaria);
+    /* Cor de texto escura */
+    color: var(--cor-texto);
+    border: none;
+    /* Borda sutilmente arredondada para suavidade */
+    border-radius: 5px;
+    padding: 15px 25px;
+    transition: background-color 0.3s, color 0.3s;
+    /* Fonte mais limpa para botões */
+    font-family: 'Roboto Serif', serif; 
+    font-weight: 500;
+    cursor: pointer;
+}
+
+button:hover {
+    /* Cor de destaque (oliva escuro) no hover */
+    background-color: var(--cor-destaque);
+    /* O texto fica mais claro no hover */
+    color: var(--cor-principal);
+}
+
+/* --- ESTILO DE EXIBIÇÃO (NÃO ALTERADO, APENAS O FUNCIONAMENTO) --- */
+.caixa-resultado{
+    display: none;
+}
+
+.caixa-resultado.mostrar{
+    display: block;
+}
+
+.caixa-alternativas{
+    display: flex;
+    flex-direction: column;
+    gap: 12px; /* Aumentei um pouco o espaço para uma leitura mais calma */
+}
